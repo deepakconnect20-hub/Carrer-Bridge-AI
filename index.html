@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerBridge AI - Bridging Students to the Right Career</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <h1>CareerBridge AI</h1>
+            <span class="tagline">Bridging Students to the Right Career</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#assessment">Assessment</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#scholarships">Scholarships</a></li>
+                <li><a href="#colleges">Colleges</a></li>
+                <li><a href="#assistant">AI Assistant</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+            </ul>
+        </nav>
+        <div class="lang-auth">
+            <select id="langSelect">
+                <option value="en">English</option>
+                <option value="ta">தமிழ் (Tamil)</option>
+                <option value="hi">हिन्दी (Hindi)</option>
+            </select>
+            <button id="authBtn" class="btn-primary">Login / Register</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h2>Empowering Rural Students with AI-Driven Guidance</h2>
+                <p>Discover your true potential, explore structured career roadmaps, find verified scholarships, and connect with the right colleges.</p>
+                <button class="btn-large" onclick="navigateTo('assessment')">Start Free Career Assessment</button>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card"><h3>20+</h3><p>Structured Careers</p></div>
+                <div class="stat-card"><h3>100+</h3><p>Scholarships & Grants</p></div>
+                <div class="stat-card"><h3>AI-Powered</h3><p>Personalized Roadmaps</p></div>
+            </div>
+        </section>
+
+        <!-- Assessment Section -->
+        <section id="assessment" class="content-section" style="display:none;">
+            <h2>Career Assessment</h2>
+            <p>Answer these interactive questions to let our AI analyze your interests, subjects, and skills.</p>
+            <div id="assessmentContainer" class="card">
+                <!-- Dynamic question injected by script.js -->
+            </div>
+        </section>
+
+        <!-- Careers Section -->
+        <section id="careers" class="content-section" style="display:none;">
+            <h2>Career Database & Recommendations</h2>
+            <div class="search-bar">
+                <input type="text" id="careerSearch" placeholder="Search careers (e.g. Data Scientist, Agriculture Technologist)...">
+            </div>
+            <div id="careerGrid" class="grid">
+                <!-- Populated via JS -->
+            </div>
+        </section>
+
+        <!-- Scholarships Section -->
+        <section id="scholarships" class="content-section" style="display:none;">
+            <h2>Scholarship Discovery</h2>
+            <p class="notice">Note: Scholarship data is demo/indicative until verified with official government portals.</p>
+            <div id="scholarshipGrid" class="grid"></div>
+        </section>
+
+        <!-- Colleges Section -->
+        <section id="colleges" class="content-section" style="display:none;">
+            <h2>Courses & Colleges</h2>
+            <div id="collegeGrid" class="grid"></div>
+        </section>
+
+        <!-- AI Assistant Section -->
+        <section id="assistant" class="content-section" style="display:none;">
+            <h2>AI Career Assistant</h2>
+            <div class="chat-container">
+                <div id="chatBox" class="chat-box">
+                    <div class="chat-message bot">Hello! I am your AI Career Assistant. Ask me anything about careers, scholarships, or college admissions.</div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Ask a question...">
+                    <button onclick="sendChatMessage()" class="btn-primary">Send</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="content-section" style="display:none;">
+            <h2>Student Dashboard</h2>
+            <div class="dashboard-grid">
+                <div class="card"><h3>Assessment Status</h3><p id="dashStatus">Not Started</p></div>
+                <div class="card"><h3>Saved Careers & Scholarships</h3><ul id="savedList"></ul></div>
+                <div class="card"><h3>Roadmap Progress</h3><progress value="20" max="100"></progress></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CareerBridge AI. Bridging Students to the Right Career.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
